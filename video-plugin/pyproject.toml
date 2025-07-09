@@ -1,0 +1,10 @@
+[project]
+name = "video-plugin"
+version = "0.1.0"
+description = "视频消息处理插件"
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+video-plugin = "video_plugin.main:VideoPlugin" 

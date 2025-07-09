@@ -1,0 +1,10 @@
+[project]
+name = "chat-context-plugin"
+version = "0.1.0"
+description = "消息上下文插件"
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+chat-context-plugin = "chat_context_plugin.main:ChatContextPlugin" 

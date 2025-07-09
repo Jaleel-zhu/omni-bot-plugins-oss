@@ -1,0 +1,10 @@
+[project]
+name = "image-plugin"
+version = "0.1.0"
+description = "图片文件下载插件"
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+image-plugin = "image_plugin.main:ImagePlugin" 

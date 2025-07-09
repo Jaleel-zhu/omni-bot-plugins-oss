@@ -1,0 +1,10 @@
+[project]
+name = "pat-plugin"
+version = "0.1.0"
+description = "拍一拍消息处理插件"
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+pat-plugin = "pat_plugin.main:PatPlugin" 

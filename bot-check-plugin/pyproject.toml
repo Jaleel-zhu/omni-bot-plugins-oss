@@ -1,0 +1,10 @@
+[project]
+name = "bot-check-plugin"
+version = "0.1.0"
+description = "A plugin to check if a message is for bot using dify workflow."
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+bot-check-plugin = "bot_check_plugin.main:BotCheckPlugin" 

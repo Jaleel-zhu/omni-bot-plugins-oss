@@ -1,0 +1,10 @@
+[project]
+name = "welcome-plugin"
+version = "0.1.0"
+description = "新用户加群欢迎插件"
+authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
+dependencies = [
+]
+
+[project.entry-points."omni_bot.plugins"]
+welcome-plugin = "welcome_plugin.main:WelcomePlugin" 
