@@ -23,6 +23,7 @@ class WelcomePluginConfig(BaseModel):
     dify_base_url: Dify API基础URL
     priority: 插件优先级，数值越大优先级越高
     """
+
     enabled: bool = False
     dify_api_key: str = ""
     dify_base_url: str = ""

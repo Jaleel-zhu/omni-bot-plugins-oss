@@ -19,6 +19,7 @@ class ImagePluginConfig(BaseModel):
     enabled: 是否启用该插件
     priority: 插件优先级，数值越大优先级越高
     """
+
     enabled: bool = False
     priority: int = 100
 
@@ -48,11 +49,14 @@ class ImagePlugin(Plugin):
         if message.local_type == MessageType.Image:
             # image_path = os.path.join(self.data_dir, message.path)
             # TODO 这个可能会从数据库查询，是有问题的
-            filename =f"{message.file_name}.dat"
+            filename = f"{message.file_name}.dat"
             # image = await self.bot.dat_decrypt_service.await_decryption(image_path)
             self.logger.info(f"注册图片解密回调: {filename}")
             self.bot.dat_decrypt_service.register_decrypt_callback(
-                filename, lambda fname, path: self.logger.info(f"图片解密成功，文件名: {fname}, 路径: {path}")
+                filename,
+                lambda fname, path: self.logger.info(
+                    f"图片解密成功，文件名: {fname}, 路径: {path}"
+                ),
             )
             context.add_response(
                 PluginExcuteResponse(

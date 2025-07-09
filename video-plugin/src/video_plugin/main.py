@@ -15,6 +15,7 @@ class VideoPluginConfig(BaseModel):
     enabled: 是否启用该插件
     priority: 插件优先级，数值越大优先级越高
     """
+
     enabled: bool = False
     priority: int = 100
 

@@ -120,7 +120,9 @@ class OpenAIBotPlugin(Plugin):
             return
         context = plusginExcuteContext.get_context()
         not_for_bot = context.get("not_for_bot", False)
-        if not_for_bot: # 用户可能没有前置判断流程，这里需要采用一般逻辑，也就是私聊消息全部回复，群聊消息除了@和引用不回复，这是典型的机器人特征
+        if (
+            not_for_bot
+        ):  # 用户可能没有前置判断流程，这里需要采用一般逻辑，也就是私聊消息全部回复，群聊消息除了@和引用不回复，这是典型的机器人特征
             return
         chat_history = context.get("chat_history", "")
         if message.is_chatroom:
