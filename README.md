@@ -4,6 +4,7 @@
 
 ## 注意事项
 
+0. omni-bot-sdk 主项目使用python版本为3.12 插件应该尽可能和主项目保持一致
 1. 注意配置文件需要写入到bot的config.yaml的plugins下
 2. 如果引入的依赖在bot sdk中已经有了，尽量不要增加依赖，防止冲突
 
