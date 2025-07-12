@@ -125,18 +125,15 @@ class OpenAIBotPlugin(Plugin):
         ):  # 用户可能没有前置判断流程，这里需要采用一般逻辑，也就是私聊消息全部回复，群聊消息除了@和引用不回复，这是典型的机器人特征
             return
         chat_history = context.get("chat_history", "")
+        # 增加判断条件，如果是私聊，直接可以响应，如果是群聊，必须引用或者@
         if message.is_chatroom:
             if message.local_type == MessageType.Text:
                 if message.is_at:
-                    pass
-                elif not not_for_bot:
                     pass
                 else:
                     return
             elif message.local_type == MessageType.Quote:
                 if message.quote_message and message.quote_message.is_self:
-                    pass
-                elif not not_for_bot:
                     pass
                 else:
                     return
