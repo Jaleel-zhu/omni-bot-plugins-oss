@@ -23,6 +23,8 @@ class WelcomePluginConfig(BaseModel):
     dify_api_key: Dify API密钥
     dify_base_url: Dify API基础URL
     priority: 插件优先级，数值越大优先级越高
+    all_room_allowed: 是否监听别人的加群信号
+    allowed_room_list: 允许处理的群列表
     """
 
     enabled: bool = False
