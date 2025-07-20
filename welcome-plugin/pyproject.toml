@@ -1,6 +1,6 @@
 [project]
 name = "welcome-plugin"
-version = "0.1.0"
+version = "0.1.1"
 description = "新用户加群欢迎插件"
 authors = [{name = "huchundong", email = "gycm520@gmail.com"}]
 dependencies = [

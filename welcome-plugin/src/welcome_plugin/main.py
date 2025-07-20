@@ -143,11 +143,8 @@ class WelcomePlugin(Plugin):
                 # 查找字符串 delchatroommember, 如果不存在就不必解析了
                 if "delchatroommember" not in message.content:
                     # 按照 A邀请B的规则判断，如果不符合就直接返回 '"老胡@omni-rpa"邀请"胡言蹊"加入了群聊'
-                    if "邀请" not in message.content:
-                        return
-                    if "加入了群聊" not in message.content:
-                        return
-                    if "邀请" in message.content and "加入了群聊" in message.content:
+                    # 扫码场景： A 通过扫描 B 分享的二维码加入群聊
+                    if "加入" in message.content and "群聊" in message.content:
                         real_name = self._extract_quoted_username(message.content, True)
                     else:
                         return
